@@ -1,16 +1,16 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <TestTest msg="You wanna Test?"/>
+  <WatchTest msg="Do Watch TEST!"/>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import TestTest from './components/TestTest.vue'
+import WatchTest from './components/WatchTest.vue'
 
 export default {
   name: 'App',
   components: {
-    TestTest
+    WatchTest
   }
 }
 </script>
