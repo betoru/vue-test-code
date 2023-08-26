@@ -3,14 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "vue-cli-service serve --port 9999",
+    "build": "vue-cli-service build --port 8888",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test:report": "nyc --reporter=lcov --reporter=text npm run test:unit"
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.13",
+    "vue-template-compiler": "^2.7.14"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -20,9 +23,11 @@
     "@vue/cli-plugin-unit-mocha": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "@vue/test-utils": "^2.0.0-0",
+    "babel-plugin-istanbul": "^6.1.1",
     "chai": "^4.2.0",
     "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3"
+    "eslint-plugin-vue": "^8.0.3",
+    "nyc": "^15.1.0"
   },
   "eslintConfig": {
     "root": true,
